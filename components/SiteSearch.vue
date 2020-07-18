@@ -15,39 +15,29 @@
         :class="{
           input: true
         }"
-        type="search"
-        @keyup.enter="search"
+        type="text"
+        @input="search"
+        placeholder="Search for Someting ?"
       />
 
       <ul v-if="matches" class="search-results subtle-box-shadow">
         <div v-if="matches.length">
-          <li
-            v-for="match in matches"
-            :key="match.slug"
-            @click="toggleSearchBar()"
-          >
-            <nuxt-link :to="`/${match.slug}`">
-              {{ match.title }}
-            </nuxt-link>
+          <li v-for="match in matches" :key="match.slug" @click="toggleSearchBar()">
+            <nuxt-link :to="`/${match.slug}`">{{ match.title }}</nuxt-link>
             <small class="match-snippet" v-html="match.snippet"></small>
           </li>
         </div>
 
-        <li v-else>
-          No results found
-          <font-awesome-icon
-            icon="times"
-            @click="toggleSearchBar()"
-          ></font-awesome-icon>
-        </li>
+        <li v-else class="text-center">No results found</li>
       </ul>
     </span>
 
     <label for="search-input">
       <font-awesome-icon
-        icon="search"
+        :icon="active ? 'times':'search'"
         class="search-icon"
         @click="toggleSearchBar()"
+        @mouseenter="active? '':toggleSearchBar()"
       />
     </label>
   </div>
@@ -67,6 +57,7 @@ export default {
   },
   methods: {
     toggleSearchBar() {
+      console.log(this.active)
       this.transitioning = true
       this.active = !this.active
       this.matches = false
@@ -127,55 +118,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.search-wrapper {
-  position: relative;
-  input {
-    width: 0;
-    opacity: 0;
-    transition: 0.5s ease width, 0.5s opacity;
-  }
-  .search-icon {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-  }
-  &.inactive {
-    input {
-      padding: 0;
-      height: 0;
-    }
-    .search-icon {
-      position: static;
-      transform: translateX(-10px);
-    }
-  }
-  &.active {
-    input {
-      opacity: 1;
-      width: 200px;
-    }
-  }
-}
-.search-results {
-  background: white;
-  padding: 10px;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 250px;
-}
-.match-snippet {
-  font-size: 0.7em;
-  display: block;
-}
-</style>
-<style>
-.search-wrapper .match-snippet span {
-  background: #eee;
-  padding: 0 3px;
-  display: inline-block;
-}
-</style>

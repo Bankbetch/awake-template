@@ -1,28 +1,17 @@
 <template>
-  <nav
-    class="navbar has-shadow is-fixed-top"
-    role="navigation"
-    aria-label="main navigation"
-  >
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <nuxt-link class="navbar-item" to="/">
         <site-logo v-if="$siteConfig.logo === 'logo-component'" />
-        <img
-          v-else
-          :src="$siteConfig.logo"
-          :alt="$siteConfig.siteName"
-          class="logo"
-        />
+        <img v-else :src="$siteConfig.logo" :alt="$siteConfig.siteName" class="logo" />
       </nuxt-link>
       <hamburger-button @click="active = !active" />
     </div>
 
-    <div
-      :class="{
+    <div :class="{
         'navbar-menu': true,
         'is-active': active
-      }"
-    >
+      }">
       <ul class="navbar-end">
         <li
           v-for="item in $siteConfig.mainMenu"
@@ -35,9 +24,7 @@
             :href="item.link"
             :to="item.link"
             :target="item.target ? item.target : '_self'"
-          >
-            {{ item.name }}
-          </component>
+          >{{ item.name }}</component>
         </li>
         <li class="navbar-item site-search-wrapper">
           <site-search />
@@ -59,21 +46,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-.navbar-item img {
-  max-height: 2rem;
-}
-.site-search-wrapper {
-  transform: translateX(5px);
-  @media (max-width: 1023px) {
-    display: none;
-  }
-}
-.navbar-burger {
-  height: auto;
-}
-
-.navbar-menu a {
-  display: block;
-}
-</style>

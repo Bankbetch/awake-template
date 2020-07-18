@@ -6,11 +6,16 @@ export const state = () => ({
   featureImage: '',
   content: '',
   author: '',
-  date: ''
+  date: '',
+  theme: 'light'
 })
 export const mutations = {
   set(state, data) {
     state = Object.assign(state, data)
+  },
+  theme(state, data) {
+    console.log('data:', data)
+    state.theme = data
   }
 }
 export const actions = {
@@ -28,6 +33,10 @@ export const actions = {
       data.slug = slug
       commit('set', data)
     }
+  },
+  theme({ commit }, data) {
+    console.log('data:', data)
+    commit('theme', data)
   }
 }
 
