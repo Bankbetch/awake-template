@@ -83,6 +83,7 @@ export default {
       this.transitioning = true
       this.matches = false
       this.query = ''
+      
       this.lastQuery = ''
       setTimeout(() => {
         this.transitioning = false
