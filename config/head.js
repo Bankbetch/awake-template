@@ -15,6 +15,13 @@ export default {
       src: 'https://identity.netlify.com/v1/netlify-identity-widget.js',
       defer: true,
       id: 'netlify-identity-widget-script'
+    },
+    {
+      src: 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=310797609745897&autoLogAppEvents=1',
+      nonce: 'pnm5IOoP',
+      crossorigin: "anonymous",
+      async: true,
+      defer: true
     }
   ]
 }

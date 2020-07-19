@@ -8,7 +8,7 @@
   >
     <div class="message-header">
       <font-awesome-icon
-        :icon="active ? 'times' : 'envelope'"
+        :icon="active ? 'times' : ['fab', 'facebook']"
         :aria-label="active ? 'close' : 'open'"
         class="close"
         @click="toggle()"
@@ -60,6 +60,7 @@ export default {
     box-shadow: none;
   }
   .message-header {
+    padding: 0.75em 1em 0.75em 1em;
     justify-content: start;
     .close {
       margin-right: 16px;
@@ -74,6 +75,7 @@ export default {
   }
 
   .message-body {
+    align-items: center;
     height: 0;
     transition: 0.4s ease all;
     transition-delay: 0.6s;

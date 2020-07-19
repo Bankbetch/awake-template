@@ -141,3 +141,25 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.input:focus,
+.taginput .taginput-container.is-focusable:focus,
+.textarea:focus,
+.select select:focus,
+.is-focused.input,
+.taginput .is-focused.taginput-container.is-focusable,
+.is-focused.textarea,
+.select select.is-focused,
+.input:active,
+.taginput .taginput-container.is-focusable:active,
+.textarea:active,
+.select select:active,
+.is-active.input,
+.taginput .is-active.taginput-container.is-focusable,
+.is-active.textarea,
+.select select.is-active {
+  border-color: unset !important;
+  box-shadow: unset !important;
+}
+</style>
