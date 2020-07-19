@@ -1,9 +1,12 @@
 /* purgecss start ignore */
-
+pre {
+  color: $white;
+  background-color: $dark;
+}
 
 .scrollbar {
   &::-webkit-scrollbar {
-    background-color: #FFF;
+    background-color: $white;
     width: 16px;
     height: 16px;
   }
