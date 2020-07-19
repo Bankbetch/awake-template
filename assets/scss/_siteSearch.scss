@@ -69,8 +69,16 @@
     display: block;
 }
 
-.search-wrapper .match-snippet span {
+@mixin search-match {
     background: #eee;
     padding: 0 3px;
     display: inline-block;
+}
+
+.search-wrapper .match-snippet span {
+    @include search-match()
+}
+
+.overlay-search .match-snippet span {
+    @include search-match()
 }

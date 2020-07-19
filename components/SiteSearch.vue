@@ -47,7 +47,7 @@ export default {
   name: 'Search',
   data() {
     return {
-      active: false,
+      active: true,
       transitioning: false,
       matches: false,
       haystack: [],
@@ -57,7 +57,6 @@ export default {
   },
   methods: {
     toggleSearchBar() {
-      console.log(this.active)
       this.transitioning = true
       this.active = !this.active
       this.matches = false

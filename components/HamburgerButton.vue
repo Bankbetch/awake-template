@@ -78,12 +78,13 @@ export default {
       document.getElementById('toggler').checked = !this.active
       this.type = type
       this.query = ''
+      this.matches = false
     },
     toggleSearchBar() {
       this.transitioning = true
       this.matches = false
       this.query = ''
-      
+
       this.lastQuery = ''
       setTimeout(() => {
         this.transitioning = false
