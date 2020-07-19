@@ -17,8 +17,8 @@ export default {
       id: 'netlify-identity-widget-script'
     },
     {
-      src: 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0&appId=310797609745897&autoLogAppEvents=1',
-      nonce: 'pnm5IOoP',
+      src: 'https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v7.0&appId=629188984327409&autoLogAppEvents=1',
+      nonce: '8M8K8ng1',
       crossorigin: "anonymous",
       async: true,
       defer: true

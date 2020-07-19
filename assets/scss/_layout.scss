@@ -1,7 +1,7 @@
 /* purgecss start ignore */
 pre {
-  color: $white;
-  background-color: $dark;
+  color: $white !important;
+  background-color: $dark !important;
 }
 
 .scrollbar {
@@ -477,4 +477,73 @@ html {
       left: 12px;
     }
   }
+}
+
+$blue: #1877f2;
+$dark-bule-hover: #213A6F;
+$dark-bule: #213A6F;
+
+.btn-facebook {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  >div>button {
+    height: 28px;
+    font-size: 13px !important;
+    background-color: $blue !important;
+    border: 0 !important;
+    font-weight: bold !important;
+
+    >a {
+      text-decoration: none !important;
+    }
+  }
+
+  span {
+    font-size: 13px;
+    margin-left: 5px;
+    display: flex;
+  }
+}
+
+#fb-share-button {
+  background: $dark-bule;
+  border-radius: 3px;
+  font-weight: 600;
+  padding: 5px 8px;
+  font-size: 15px;
+  height: 28px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  position: static;
+
+  &:hover {
+    cursor: pointer;
+    background: $dark-bule-hover
+  }
+
+  svg {
+    width: 18px;
+    fill: $white;
+    vertical-align: middle;
+    border-radius: 2px;
+  }
+
+  span {
+    vertical-align: middle;
+    color: $white;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 3px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+._89n_ {
+  background: $dark-bule !important;
 }

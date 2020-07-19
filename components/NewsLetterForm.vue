@@ -18,20 +18,31 @@
       </div>
     </form>-->
     <div id="fb-root" class="btn-facebook">
-      <span>
+      <!-- <span>
         <div class="warp-face">
           <font-awesome-icon :icon="['fab', 'facebook-square']" class="fa-face-color" />
         </div>
         <span></span>
-      </span>
+      </span>-->
       <div
         class="fb-like"
-        data-href="https://developers.facebook.com/docs/plugins/"
-        data-layout="standard"
+        data-href="https://www.facebook.com/facebookapp/"
+        data-width
+        data-layout="button_count"
         data-action="like"
-        data-size="small"
+        data-size="large"
         data-share="false"
       ></div>
+      <span>| OR |</span>
+      <div id="fb-share-button" @click="openSharedFacebook">
+        <svg viewBox="0 0 12 12" preserveAspectRatio="xMidYMid meet">
+          <path
+            class="svg-icon-path"
+            d="M9.1,0.1V2H8C7.6,2,7.3,2.1,7.1,2.3C7,2.4,6.9,2.7,6.9,3v1.4H9L8.8,6.5H6.9V12H4.7V6.5H2.9V4.4h1.8V2.8 c0-0.9,0.3-1.6,0.7-2.1C6,0.2,6.6,0,7.5,0C8.2,0,8.7,0,9.1,0.1z"
+          />
+        </svg>
+        <span>Share</span>
+      </div>
     </div>
   </div>
 </template>
@@ -50,43 +61,21 @@ export default {
       }
       return this.$siteConfig.newsletter.other.formAction
     }
+  },
+  methods: {
+    openSharedFacebook() {
+      const url = window.location.href
+      window.open(
+        'https://www.facebook.com/sharer/sharer.php?u=' + url,
+        'facebook-share-dialog',
+        'width=800,height=600'
+      )
+      return false
+    }
   }
 }
+// `https://www.facebook.com/sharer/sharer.php?u=${$route.fullPath}`
 </script>
 
 <style lang="scss" scoped>
-$blue: #1877f2;
-$dark-buld: #516eab;
-.btn-facebook {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  > div > button {
-    height: 28px;
-    font-size: 13px !important;
-    background-color: $blue !important;
-    border: 0 !important;
-    font-weight: bold !important;
-    > a {
-      text-decoration: none !important;
-    }
-  }
-  span {
-    font-size: 13px;
-    margin-left: 5px;
-    display: flex;
-  }
-}
-.warp-face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: 1.5px solid #000;
-  svg {
-    margin-right: 5px;
-  }
-  .fa-face-color {
-    color: $dark-buld;
-  }
-}
 </style>

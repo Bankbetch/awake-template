@@ -1,15 +1,6 @@
 <template>
   <main class="section page-main-section">
     <div class="container">
-      <span class="share-content">
-        <a
-          href="https://www.facebook.com/dialog/share?
-  app_id=629188984327409
-  &display=popup
-  &href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F
-  &redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer"
-        >test</a>
-      </span>
       <div class="columns">
         <aside v-if="computedTheme === 'sidebar-left'" class="column left-sidebar is-one-quarter">
           <slot name="sidebar"></slot>
@@ -70,8 +61,5 @@ export default {
   &.left-sidebar {
     border-right: 1px solid #eee;
   }
-}
-.share-content {
-  float: right;
 }
 </style>

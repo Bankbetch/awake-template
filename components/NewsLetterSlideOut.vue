@@ -75,7 +75,7 @@ export default {
   }
 
   .message-body {
-    align-items: center;
+    margin: auto;
     height: 0;
     transition: 0.4s ease all;
     transition-delay: 0.6s;
