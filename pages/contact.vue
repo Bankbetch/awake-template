@@ -1,6 +1,6 @@
 <template>
   <div id="contact-page" class="page-wrapper contact-page content-page">
-    <site-hero
+    <!-- <site-hero
       title="Contact Us"
       subtitle="Example Contact Page"
       image="/uploads/contact-hero.jpg"
@@ -52,10 +52,10 @@
         <h3 class="subtitle is-4">
           Latest Posts
         </h3>
-        <!-- Latest Posts -->
+        Latest Posts
         <posts-grid :per-row="1" :number="2" />
       </template>
-    </main-section>
+    </main-section>-->
   </div>
 </template>
 <script>

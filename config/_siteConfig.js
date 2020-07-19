@@ -10,7 +10,7 @@ import theCMS from '../cms/netlify/cms'
 export default {
   siteName: 'Bank Blog',
   tagline: 'A Nuxt.js Theme for Netlify CMS',
-  featureImage: '/uploads/home-hero.jpg',
+  featureImage: '/uploads/home-hero.jpeg',
   logo: 'logo-component', // 'logo-component', // or '/logo.svg' for regular image
   googleAnalytics: {
     on: true,
