@@ -35,6 +35,27 @@ import { setPageData, getFormattedDate } from '../helper'
 import Markdown from '~/components/Markdown'
 import PostSidebar from '~/components/PostSidebar'
 export default {
+  head() {
+    return {
+      title: `Home | ${this.title}`,
+
+      meta: [
+        {
+          keywords: [this.title, 'safety-blog', 'safety'],
+          name: 'description',
+          content: this.$store.state.content.substring(100)
+        },
+        {
+          property: 'og:title',
+          content: this.$store.state.content.substring(100)
+        },
+        { property: 'og:site_name', content: `Home | ${this.title}` },
+        { property: 'og:type', content: 'website' },
+        { name: 'robots', content: 'index,follow' },
+        { property: 'og:url', content: this.$route.fullPath }
+      ]
+    }
+  },
   components: {
     Markdown,
     PostSidebar
