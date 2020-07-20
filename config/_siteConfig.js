@@ -8,7 +8,7 @@ import theCMS from '../cms/netlify/cms'
  * General Site configurations
  */
 export default {
-  siteName: 'Safty Blog',
+  siteName: 'Safety Blog',
   tagline: 'A Nuxt.js Theme for Netlify CMS',
   featureImage: '/uploads/home-hero.jpeg',
   logo: 'logo-component', // 'logo-component', // or '/logo.svg' for regular image
@@ -60,7 +60,7 @@ export default {
   disqus: {
     on: true,
     loadingStrategy: 'button', // Options: onload, lazy, button
-    siteShortName: 'blog-bank-io' // 'blog-danielkelly-io'
+    siteShortName: 'Safety-blog-io' // 'blog-danielkelly-io'
   },
 
   // Newsletter Subscribe
