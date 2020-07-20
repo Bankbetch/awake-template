@@ -16,7 +16,6 @@ export const modules = [
   '@nuxtjs/style-resources',
   'nuxt-fontawesome',
   'nuxt-responsive-loader',
-  'nuxt-seo'
 ]
 if (siteConfig.googleAnalytics.on && siteConfig.googleAnalytics.id) {
   modules.push('@nuxtjs/google-gtag')
@@ -31,7 +30,7 @@ export const modulesSettings = {
       },
       {
         set: '@fortawesome/free-brands-svg-icons',
-        icons: ['faFacebook','faFacebookSquare'],
+        icons: ['faFacebook', 'faFacebookSquare'],
       }
     ],
     prefix: false
