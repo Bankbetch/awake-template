@@ -261,10 +261,15 @@ html {
   padding: 1rem;
 }
 
-.menu-wrap .menu>div>div>ul>li>a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.4s ease;
+.menu-wrap .menu>div>div>ul {
+  text-align: center;
+
+  &>li>a {
+    padding-bottom: 10px;
+    color: inherit !important;
+    // text-decoration: none;
+    transition: color 0.4s ease;
+  }
 }
 
 .navbar,
@@ -343,12 +348,11 @@ html {
   justify-content: center;
 }
 
+
 .nuxt-link-exact-active {
   color: $dark !important;
-}
-
-.nuxt-link-active {
-  color: $dark !important;
+  border-bottom: 2px solid $primary;
+  color: $primary;
 }
 
 .overlay-search {
@@ -475,8 +479,7 @@ html {
 }
 
 $blue: #1877f2;
-$dark-bule-hover: #213A6F;
-$dark-bule: #213A6F;
+$dark-bule-hover:#0b6dee;
 
 .btn-facebook {
   display: flex;
@@ -503,7 +506,7 @@ $dark-bule: #213A6F;
 }
 
 #fb-share-button {
-  background: $dark-bule;
+  background: $blue;
   border-radius: 3px;
   font-weight: 600;
   padding: 5px 8px;
@@ -537,8 +540,4 @@ $dark-bule: #213A6F;
       text-decoration: none;
     }
   }
-}
-
-._89n_ {
-  background: $dark-bule !important;
 }

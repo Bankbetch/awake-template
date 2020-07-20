@@ -8,7 +8,7 @@ import theCMS from '../cms/netlify/cms'
  * General Site configurations
  */
 export default {
-  siteName: 'Bank Blog',
+  siteName: 'Safty Blog',
   tagline: 'A Nuxt.js Theme for Netlify CMS',
   featureImage: '/uploads/home-hero.jpeg',
   logo: 'logo-component', // 'logo-component', // or '/logo.svg' for regular image
@@ -17,10 +17,10 @@ export default {
     id: process.env.GOOGLE_ANALYTICS_ID
   },
   mainMenu: [
-    // {
-    //   name: 'About',
-    //   link: '/about'
-    // },
+    {
+      name: 'About',
+      link: '/about'
+    },
     // {
     //   name: 'Contact',
     //   link: '/contact'
@@ -28,12 +28,12 @@ export default {
     {
       name: 'Categories',
       link: '/categories'
-    }
-    // {
-    //   name: 'Github Repo',
-    //   link: 'https://github.com/danielkellyio/awake-template',
-    //   target: '_blank'
-    // },
+    },
+    {
+      name: 'Facebook',
+      link: 'https://facebook.com',
+      target: '_blank'
+    },
     // {
     //   name: 'Awake+ Premium',
     //   link: 'https://awake-premium-lp.netlify.com/',

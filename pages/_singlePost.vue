@@ -1,14 +1,13 @@
 <template>
   <div id="post-page" class="page-wrapper post-page">
     <site-hero :title="title" :subtitle="subtitle" :image="featureImage">
-      <span
-        v-if="author && $siteConfig.posts.displayAuthor"
-        class="author-wrapper"
-      >
-        <strong>Author:</strong> {{ author }}
+      <span v-if="author && $siteConfig.posts.displayAuthor" class="author-wrapper">
+        <strong>Author:</strong>
+        {{ author }}
       </span>
       <span v-if="date" class="date-wrapper">
-        <strong>Published on:</strong> {{ date }}
+        <strong>Published on:</strong>
+        {{ date }}
       </span>
     </site-hero>
     <main-section :one-column-constrained="true">
@@ -16,9 +15,7 @@
         <div class="post-wrapper">
           <markdown :markdown="$store.state.content" />
           <div class="other-posts">
-            <h6 class="subtitle is-size-4">
-              Related Posts
-            </h6>
+            <h6 class="subtitle is-size-4">Related Posts</h6>
             <!-- Related Posts -->
             <posts-grid :number="3" :category="category" :exclude="slug" />
           </div>
@@ -38,6 +35,18 @@ import { setPageData, getFormattedDate } from '../helper'
 import Markdown from '~/components/Markdown'
 import PostSidebar from '~/components/PostSidebar'
 export default {
+  head() {
+    return {
+      title: `Home | ${this.title}`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$store.state.content
+        }
+      ]
+    }
+  },
   components: {
     Markdown,
     PostSidebar

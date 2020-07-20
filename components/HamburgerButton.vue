@@ -43,7 +43,7 @@
                   :key="match.slug"
                   @click="toggleSearchBar(),checkActive('search')"
                 >
-                  <nuxt-link :to="`/${match.slug}`">{{ match.title }}</nuxt-link>
+                  <nuxt-link class="active-ham" :to="`/${match.slug}`">{{ match.title }}</nuxt-link>
                   <small class="match-snippet" v-html="match.snippet"></small>
                 </li>
               </div>
