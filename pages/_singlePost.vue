@@ -35,18 +35,6 @@ import { setPageData, getFormattedDate } from '../helper'
 import Markdown from '~/components/Markdown'
 import PostSidebar from '~/components/PostSidebar'
 export default {
-  head() {
-    return {
-      title: `Home | ${this.title}`,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.$store.state.content
-        }
-      ]
-    }
-  },
   components: {
     Markdown,
     PostSidebar
@@ -68,7 +56,7 @@ export default {
       return `${process.env.URL}/${this.$route.fullPath}`
     }
   },
-  fetch({ store, params }) {
+  fetch({ store, params, ctx }) {
     setPageData(store, { resource: 'post', slug: params.singlePost })
   }
 }
