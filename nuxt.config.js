@@ -13,7 +13,6 @@ export default {
    ** Customize the progress-bar color
    */
   loading: { color: '#fff' },
-
   /*
    ** Headers of the page
    */
@@ -21,6 +20,9 @@ export default {
   generate: {
     routes: otherRoutes.concat(getDynamicPaths(routeMap))
   },
+  buildModules: [
+    '@nuxtjs/dotenv'
+  ],
   /*
    ** Global CSS
    */

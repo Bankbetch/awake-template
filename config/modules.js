@@ -8,7 +8,6 @@ if (process.env.URL && process.argv[2] === 'generate') {
     baseURL: url
   }
 }
-
 export const modules = [
   // Doc: https://axios.nuxtjs.org/usage
   '@nuxtjs/axios',

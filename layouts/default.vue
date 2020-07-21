@@ -45,7 +45,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: this.url
+          content: process.env.URL
         },
         {
           hid: 'twitter:card',
