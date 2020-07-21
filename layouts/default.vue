@@ -19,6 +19,10 @@ export default {
     return {
       title: `${this.$store.state.title} | ${this.$siteConfig.siteName}`,
       meta: [
+        {
+          name: 'google-site-verification',
+          content: 'xY9Uroht7wjbsfPGAT_nDmNpWNAVie-MmBtkxdqhwbE'
+        },
         { charset: 'utf-8' },
         {
           name: 'keywords',
