@@ -19,6 +19,11 @@ export default {
     return {
       title: `${this.$store.state.title} | ${this.$siteConfig.siteName}`,
       meta: [
+        { charset: 'utf-8' },
+        {
+          name: 'keywords',
+          content: 'safety-blog.netlify'
+        },
         {
           hid: 'description',
           name: 'description',

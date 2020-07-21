@@ -9,7 +9,7 @@ import theCMS from '../cms/netlify/cms'
  */
 export default {
   siteName: 'Safety Blog',
-  tagline: 'A Nuxt.js Theme for Netlify CMS',
+  tagline: 'Create By Nuxt.js Theme for Netlify CMS',
   featureImage: '/uploads/home-hero.jpeg',
   logo: 'logo-component', // 'logo-component', // or '/logo.svg' for regular image
   googleAnalytics: {

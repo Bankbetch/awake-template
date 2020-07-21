@@ -35,11 +35,6 @@ import { setPageData, getFormattedDate } from '../helper'
 import Markdown from '~/components/Markdown'
 import PostSidebar from '~/components/PostSidebar'
 export default {
-  head() {
-    return {
-      title: `Home | ${this.title}`
-    }
-  },
   components: {
     Markdown,
     PostSidebar
